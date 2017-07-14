@@ -27,3 +27,7 @@ h1 {
 .query {
   margin-top: 200px;
 }
+
+.wiki_img {
+  border: 4px solid skyblue;
+}
