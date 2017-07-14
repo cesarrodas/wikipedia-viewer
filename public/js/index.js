@@ -5,7 +5,7 @@ $(document).ready(function(){
     var article;
 
     $('.random').click(function(){
-      window.location.href = "http://en.wikipedia.org/wiki/Special:Random";
+      window.location.href = "https://en.wikipedia.org/wiki/Special:Random";
     });
 
     $(document).keypress(function(e) {
@@ -26,7 +26,7 @@ $(document).ready(function(){
     function search(){
     $.ajax({
         type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0|1&gsrlimit=20&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=3&exlimit=max&pithumbsize=400&gsrsearch=" + title + "&callback=?",
+        url: "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0|1&gsrlimit=20&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=3&exlimit=max&pithumbsize=400&gsrsearch=" + title + "&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json",
@@ -57,7 +57,7 @@ $(document).ready(function(){
           result += "<div class='row text-center'>"+
             "<div class='col-md-10 col-md-offset-1'>";
         }
-        result += "<a href='http://en.wikipedia.org/?curid="
+        result += "<a href='https://en.wikipedia.org/?curid="
           + pages[key].pageid +"' target='_blank'>" +
         "<div class='col-md-4 text-center answer'>" +
         "<div class='thumbnail wiki_img'>" +
