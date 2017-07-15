@@ -41,8 +41,7 @@ $(document).ready(function(){
     };
     // This is the hits to the search
     function hit(pages){
-      var count = 0;
-      var result = "";
+      var result = "<div id='picture-container'>";
       for(var key in pages){
         console.log(pages);
         if(!pages[key].thumbnail || !pages[key].title
@@ -52,31 +51,23 @@ $(document).ready(function(){
           continue;
         }
 
-        count++;
-        if(count % 3 === 1 || count === 1){
-          result += "<div class='row text-center'>"+
-            "<div class='col-md-10 col-md-offset-1'>";
-        }
-        result += "<a href='https://en.wikipedia.org/?curid="
-          + pages[key].pageid +"' target='_blank'>" +
-        "<div class='col-md-4 text-center answer'>" +
-        "<div class='thumbnail wiki_img'>" +
-        "<div class=' img-responsive'>" +
-        "<img src='"+ pages[key].thumbnail.source +
-          "' max-height='300px' max-width='300px'>" +
-        "</div>"
-        + "<div class='caption'>" +
-        "<h3>" + pages[key].title + "</h3>" +
-        "<p>"+ pages[key].extract +"</p>" +
-        "</div>" +
-        "</div>" +
-        "</div>" +
+        result += "<a class='picture-container caption' href='https://en.wikipedia.org/?curid=" +
+        pages[key].pageid + "' target='_blank'>" +
+          "<div class='text-center'>" +
+            "<div class='thumbnail wiki-article'>" +
+              "<div>" +
+                "<img class='wiki-img img-responsive' src='"+ pages[key].thumbnail.source +
+                "' max-height='90%' max-width='90%'>" +
+              "</div>" +
+              "<div class='caption'>" +
+                "<h3>" + pages[key].title + "</h3>" +
+                "<p>"+ pages[key].extract +"</p>" +
+              "</div>" +
+            "</div>" +
+          "</div>" +
         "</a>";
-
-        if(count % 3 === 0){
-          result += "</div></div>";
-        }
       }
+      result += "</div>";
       $('.query').html(result);
     }
 });
