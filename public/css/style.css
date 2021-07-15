@@ -9,12 +9,24 @@ h1 {
 .btn {
   margin-top: 10px;
 }
+
+.inputContainer {
+  position: relative;
+}
+
+#searchicon {
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
 #searchbox {
   border-radius: 10px;
   margin-top: 20px;
-  padding-left:3px;
   margin-bottom: 10px;
   font-family: serif;
+  padding: 5px;
+  padding-left: 30px;
 }
 *:focus {
   outline: none;
@@ -29,12 +41,14 @@ h1 {
 }
 
 .wiki-article {
-  border: 6px solid skyblue;
+  border: 4px solid #00003d;
+  background-color: #e3eef4;
 }
 
 .wiki-img {
-  border: 2px solid #32325b;
-  margin: auto;
+  /* border: 2px solid #32325b; */
+  border-radius: 4px;
+  margin: 20px auto;
 }
 
 #picture-container {
