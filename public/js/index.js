@@ -1,4 +1,3 @@
-//Productivity Tips for Web Designers
 
 $(document).ready(function(){
     var title = "";
