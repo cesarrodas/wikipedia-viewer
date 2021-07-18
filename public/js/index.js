@@ -43,7 +43,6 @@ $(document).ready(function(){
     function hit(pages){
       var result = "<div id='picture-container'>";
       for(var key in pages){
-        console.log(pages);
         if(!pages[key].thumbnail || !pages[key].title
           || !pages[key].extract
           || pages[key] === undefined
